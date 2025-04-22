@@ -26,7 +26,8 @@ namespace grupofunctionsmartes
             }
             else
             {
-                string connectionString = @"Data Source=sqldani3213.database.windows.net;Initial Catalog=AZURETAJAMAR;Persist Security Info=True;User ID=adminsql;Password=********;Encrypt=True;Trust Server Certificate=True";
+                string connectionString =
+                    Environment.GetEnvironmentVariable("SqlAzure");
                 SqlConnection cn = new SqlConnection(connectionString);
                 SqlCommand com = new SqlCommand();
                 com.Connection = cn;
